@@ -1,0 +1,11 @@
+Dependencies
+
+express
+express-handlebars
+moment timezone
+querystring (deprecated)
+node-fetch
+body-parser
+multer
+serve-favicon
+cookie-parser

@@ -1,0 +1,1210 @@
+
+
+<div class="questionshead">
+
+<!-- College Name here -->  
+<h1 style="font-size: 120px">{{name}}</h1>
+
+</div>
+
+<div class = "questions">
+
+
+
+<p>{{city}}</p>
+<p>208 miles away from NYC</p>
+<br>
+
+<img src="{{img}}" width="500" height="600">
+
+<br>
+
+
+
+<P style="font-size: 70px">${{avgNetPrice}}</P>
+<P>your estimated annual tuition (after scholoarships and fin-aid) based on your information, which is  {{percentage  avgNetPrice avgCostOfAttendance}}% lower than your max tution price</P>
+<!-- OTHER OPTION TYPES -->
+<!-- LESS -  which is 25% lower than your max tution price -->
+<!-- EQUALTO = which is your max tution price -->
+
+
+<br>
+
+<P style="font-size: 70px">{{acceptanceRate}}%</P>
+<P>your estimated Regular Decision acceptance rate, which is 2% higher than the average applicant</P>
+
+<!-- OTHER OPTION TYPES -->
+<!-- LESS -  which is 2% lower than the average applicant -->
+<!-- EQUALTO = which is the average acceptance rate -->
+
+<br>
+
+<P style="font-size: 70px">#1 </P>
+<P>this school was ranked as the #1 best fit for you in our system of 1200 schools</P>
+<!-- OTHER OPTION TYPES -->
+<!-- OTHER -  this school was ranked as the #234 best fit for you in our system of 1200 schools -->
+<br>
+
+<!--
+<P style="font-size: 70px">HERE</P>
+<P>is where you click to learn more about (insert univeristy) admission</P>
+
+
+<P style="font-size: 70px">HERE</P>
+<P>is where you click to learn more about (insert univeristy) financial aid</P>
+
+
+<P style="font-size: 70px">$50</P>
+<P>Application fee</P>
+ -->
+<br>
+<br>
+
+
+
+<h1>GRADES</h1>
+<p> Stats at {{name}}</p>
+<!-- scores on the right of each bar  -->
+
+  <!-- SAT AVERAGE -->
+
+  {{#if satAverage}}
+    
+    <div id="btn">
+
+     <div class="d-inline-flex align-items-center" style="width: 100%; ">
+     
+
+         <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+          <h3 style="display: inline-block; margin-bottom: 0;">School SAT</h3>
+        </div>
+
+        <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+          <a href="#" style="display: inline-block; width: {{adjustNum 100 satAverage 1600}}%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+        </div>
+
+        <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+            <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+        </div>
+
+        <div style="width: 15%;"></div>
+     
+      </div>
+  </div>
+
+  {{else}}
+
+    <div id="btn">
+
+     <div class="d-inline-flex align-items-center" style="width: 100%; ">
+        <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+          <h3 style="display: inline-block; margin-bottom: 0;">School SAT</h3>
+        </div>
+
+        <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+            <h4  style="display: inline-block; margin-bottom: 0; ">No SAT required!</h4>
+        </div>
+
+        <div style="width: 15%;"></div>
+     
+      </div>
+        </div>
+
+  {{/if}}
+
+
+    <!-- YOUR SAT --> 
+
+    {{#if yourSat}}
+
+    <div id="btn">
+
+      <div class="d-inline-flex align-items-center" style="width: 100%; ">
+  
+      <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+        <h3 style="display: inline-block; margin-bottom: 0;">Your SAT</h3>
+      </div>
+
+      <div  style="display: inline; width: {{adjustNum 45 yourSat 1600}}%; padding: 0; text-align: left;">
+        <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+      </div>
+
+      <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">{{yourSat}}</h4>
+      </div>
+
+      <div style="width: 15%;"></div>
+  
+    </div>
+    </div>
+
+    {{else}}
+
+    <div id="btn">
+
+      <div class="d-inline-flex align-items-center" style="width: 100%; ">
+  
+      <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+        <h3 style="display: inline-block; margin-bottom: 0;">Your SAT</h3>
+      </div>
+
+
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">Take the quiz</h4> <a href="/quiz">here</a><h4  style="display: inline-block; margin-bottom: 0; ">!</h4>
+      </div>
+
+      <div style="width: 15%;"></div>
+  
+    </div>
+  </div>
+
+  {{/if}}
+
+
+
+  <!-- ACT -->
+
+  {{#if actCumulativeMidpoint}}
+  <div id="btn">
+  <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">School ACT</h3>
+    </div>
+
+    <div  style="display: inline; width: {{adjustNum 45 actCumulativeMidpoint 36}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">{{actCumulativeMidpoint}}</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+
+  {{else}}
+
+   <div id="btn">
+  <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">School ACT</h3>
+    </div>
+
+    <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">No ACT required!</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  </div>
+
+  {{/if}}
+  
+  <!-- YOUR ACT --> 
+
+  {{#if yourAct}}
+
+  
+    <div id="btn">
+
+      <div class="d-inline-flex align-items-center" style="width: 100%; ">
+  
+      <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+        <h3 style="display: inline-block; margin-bottom: 0;">Your ACT!</h3>
+      </div>
+
+      <div  style="display: inline; width: {{adjustNum 45 yourAct 36}}%; padding: 0; text-align: left;">
+        <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+      </div>
+
+      <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">{{yourAct}}</h4>
+      </div>
+
+      <div style="width: 15%;"></div>
+  
+    </div>
+  </div>
+
+
+  {{else}}
+   <div id="btn">
+  <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">School ACT</h3>
+    </div>
+
+
+    <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+         <h4  style="display: inline-block; margin-bottom: 0; ">Take the quiz</h4> <a href="/quiz">here</a><h4  style="display: inline-block; margin-bottom: 0; ">!</h4>    
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  </div>
+
+  {{/if}}
+  
+  
+  
+<p> ***Your HS grades are on average 23% higher than the HS grades of admitted Cornell students!*** </p>
+
+
+
+
+
+
+<BR><BR>
+
+<h1>Major Rankings</h1>
+<p> National Percentile major ranknings at Cornells</p>
+<!-- scores on the right of each bar  -->
+
+<!-- ART Ranking --> 
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Art</h3>
+    </div>
+
+    {{#if artPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 artPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage artPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Art Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+
+<!-- Biology Ranking -->
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Biology</h3>
+    </div>
+
+    {{#if bioPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 bioPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage bioPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Biology Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+    </div>
+
+ <!-- Biz Ranking -->
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Business</h3>
+    </div>
+
+    {{#if businessPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 businessPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage businessPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Business Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+  <!-- CHEM -->
+
+ <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Chemistry</h3>
+    </div>
+
+    {{#if chemistryPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 chemistryPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage chemistryPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Chemistry Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+<!-- Communications -->
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Communications</h3>
+    </div>
+
+    {{#if communicationsPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 communicationsPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage communicationsPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Communications Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+   </div>
+
+  </div>
+<!-- CS ranking rip my Cs dreams kekeroni --> 
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Computer Science</h3>
+    </div>
+
+    {{#if csPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 csPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage csPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Computer Science Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+  <!-- ECONOMICS --> 
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Economics</h3>
+    </div>
+
+    {{#if economicsPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 economicsPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage economicsPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Economics Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+  <!-- History -->
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">History</h3>
+    </div>
+
+    {{#if historyPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 historyPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage historyPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No History Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+  <!--Nusring -->
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Nursing</h3>
+    </div>
+
+    {{#if nursingPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 nursingPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage nursingPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Nursing Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+  </div>
+
+  <!--Physics -->
+
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Physics</h3>
+    </div>
+
+    {{#if physicsPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 physicsPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage physicsPercentile}}</h4>
+    </div>
+    <div style="width: 15%;"></div>
+
+    {{else}}
+      <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">No Physics Ranking for this college!</h4>
+      </div>
+      <div style="width: 15%;"></div>
+    {{/if}}
+ 
+  </div>
+
+  </div>
+
+
+<!-- END OF RANKINGS HOLY FUCK WHO THE FUCK MADE ME DO THIS SHIT OMFGHGG -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<h1>Class Sizes</h1>
+<p> Class sizes at Cornell, by percentage</p>
+
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">2-9 </h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">10-19 </h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+  
+  
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">20-29 </h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+  
+  
+  
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">30-39  </h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+
+
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">40-49  </h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+       <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">50-99  </h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">100+  </h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+      <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+
+
+-->
+
+<br>
+<br>
+
+
+<!-- wtf why doesn't the API show this 
+<h1>Demographics</h1>
+<p>Male-Female percentage breakdown</p>
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Female</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Male</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+-->
+  
+
+  <!-- Greek Life --> 
+  
+<h1>Greek Life</h1>
+<p>Percentage of Students participating in Greek Life</p>
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">{{name}}</h3>
+    </div>
+
+  {{#if greekPercentile}}
+    <div  style="display: inline; width: {{adjustNum 45 greekPercentile 1}}%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">{{onePercentage greekPercentile}}</h4>
+    </div>
+
+    {{else}}
+
+    
+    <div style="display: inline; width: 70%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">No ranking on Greek Life!</h4>
+    </div>
+  {{/if}}
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+<!-- nothing on fin-aid
+ 
+<h1>Finacial Aid</h1>
+<p>Percentage of Students Receiving Financial Aid</p>
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">{{name}}</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+    <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Average</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+
+  -->
+  
+<br><br>
+
+<h1>Average Salary</h1>
+<p>How much students at Cornell make X years after graduating compared to the national average</p>
+<!-- scores on the right of each bar  -->
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">6 years</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+         <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> average</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">10 years </h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+  
+  
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> average</h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+<p> ***Students at Cornell make on average 23% more than the national average 6 years after graduating and 54% more 10 years after graduating!!*** </p>
+
+<br><br>
+
+
+<h1>Fun Rankings</h1>
+<p>Cornell Percentile Rankings on the Fun part of college!</p>
+<!-- scores on the right of each bar  -->
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Greek Life</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+         <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Party Scene</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Student Life</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+            <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+  
+  
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Hottest Guys</h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+           <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>  </div>
+
+<p> ***Your grades are on average 23% higher than the grades at Cornell!*** </p>
+
+
+<br><br>
+
+
+<h1>Important Stuff</h1>
+<p> Percentile rankings of Cornell in some pretty important factors</p>
+<!-- scores on the right of each bar  -->
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Campus</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+    <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>  </div>
+
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Professors</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  
+  
+  
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Value</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  
+    </div>
+
+  
+  
+  
+
+
+<br><br>
+
+<h1>Student/Faculty Ratio</h1>
+<p>How many students there are for every faculty member</p>
+
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Ratio</h3>
+    </div>
+
+    <div  style="display: inline; width: 55%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap  mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+          <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+<br><br>
+
+
+
+<h1>Finacial Aid</h1>
+<p>Percentage of Students Receiving Financial Aid</p>
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;">Cornell</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2""></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+         <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+  <div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Average</h3>
+    </div>
+
+    <div  style="display: inline; width: 48%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+        <h4  style="display: inline-block; margin-bottom: 0; ">1510</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+    </div>
+
+<br><br>
+<h1>Political Scale</h1>
+<p>Percentile of Cornell in rankings of most liberal and conservative schools</p>
+<div id="btn">
+ <div class="d-inline-flex align-items-center" style="width: 100%; ">
+ 
+    <div style="display: inline; width: 15%; text-align: right; padding-right: 25px;">
+      <h3 style="display: inline-block; margin-bottom: 0;"> Liberal</h3>
+    </div>
+
+    <div  style="display: inline; width: 45%; padding: 0; text-align: left;">
+      <a href="#" style="display: inline-block; width: 100%; text-align: left; padding-right: 20px;" class="btn testcap mt-2 mb-2"></a>
+    </div>
+
+    <div style="display: inline; width: 15%; padding-left: 35px; text-align: left;">
+       <h4  style="display: inline-block; margin-bottom: 0; ">1500</h4>
+    </div>
+
+    <div style="width: 15%;"></div>
+ 
+  </div>
+  </div>
+
+  </div>
